@@ -1,15 +1,15 @@
 import React from "react";
 import ToggleButton from "@material-ui/lab/ToggleButton";
 import ToggleButtonGroup from "@material-ui/lab/ToggleButtonGroup";
-import CardMedia from "@material-ui/core/CardMedia";
 import { makeStyles } from "@material-ui/core/styles";
 
 const useStyles = makeStyles({
   root: {
-    maxWidth: 345,
-  },
-  media: {
-    height: 140,
+    justifyContent: 'center',
+    paddingLeft: '10rem',
+    paddingBottom: '2rem',
+    paddingTop: '1rem',
+    position: 'relative'
   },
 });
 
@@ -28,6 +28,7 @@ export default function ToggleButtonsMultiple() {
         onChange={handleFormat}
         aria-label="text formatting"
         justify="flex-center"
+        className={classes.root}
       >
         <ToggleButton value="bold" aria-label="bold">
           ALL
@@ -45,24 +46,6 @@ export default function ToggleButtonsMultiple() {
           PERSONAL CARE
         </ToggleButton>
       </ToggleButtonGroup>
-      <div class="mainDiv">
-        <div class="row imgDiv">
-          <CardMedia
-          class="col-md-6 img"
-            className={classes.media}
-            image="https://images-na.ssl-images-amazon.com/images/I/71fVoqRC0wL._SL1500_.jpg"
-            title="Contemplative Reptile"
-          />
-        
-          <div class="col-md-6 img-content" style="margin: auto;">
-            <h2>Radisson Blu Hotel</h2>
-            <p>#38 of 1,289 hotels in New Delhi</p>
-            <div class="text-justify row">
-              National Highway 8, New Delhi 110017 India
-              </div>
-          </div>
-        </div>
-      </div>
     </div>
   );
 }
